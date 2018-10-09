@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validate Account</title>
+</head>
+<body>
+    <script>
+        function ValidateAccount(str) {
+            var regexp = /^[_a-z0-9]{6,}$/;
+            if (regexp.test(str)){
+                console.log('Valid');
+            } else
+                console.log('Not Valid');
+        }
+        var string = '123abc_';
+        ValidateAccount(string);
+        var string = '_______';
+        ValidateAccount(string);
+        var string = '123456';
+        ValidateAccount(string);
+        var string = 'abcdegf';
+        ValidateAccount(string);
+        var string = 'abc_123';
+        ValidateAccount(string);
+        var string = '@';
+        ValidateAccount(string);
+        var string = '12345';
+        ValidateAccount(string);
+        var string = '1234_';
+        ValidateAccount(string);
+        var string = 'abcde';
+        ValidateAccount(string);
+    </script>
+</body>
+</html>
